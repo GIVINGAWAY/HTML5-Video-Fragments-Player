@@ -59,10 +59,6 @@ to {
 	overflow-y: auto;
 }
 
-.clearSearch {
-	cursor: pointer;
-}
-
 .in-search {
 	background: none;
 	height: 30px;
@@ -126,7 +122,7 @@ input {
 	color: #524F4F;
 }
 
-.run, .add-new {
+.run, .add-new, .clear-search {
 	cursor: pointer;
 }
 
@@ -196,7 +192,7 @@ input {
 			<div title="Search By Keywords" class="search-area">
 				<span class="glyphicon glyphicon-search"></span>
 				<input class="in-search" placeholder="search" type="text" ng-model="searchData">
-				<span class="clearSearch glyphicon glyphicon-remove-circle" ng-click="searchData=''"></span>
+				<span class="clear-search glyphicon glyphicon-remove-circle" ng-click="searchData=''"></span>
 			</div>
 
 			<div ng-repeat="data in datas | filter: searchData " ng-show="data.show">
